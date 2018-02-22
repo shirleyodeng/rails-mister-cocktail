@@ -1,6 +1,31 @@
-<h1>Cocktails</h1>
-<% @cocktails.each do |cocktail| %>
-  <%= link_to cocktail.name, cocktail_path(cocktail) %>
-<% end %>
-
-<%= link_to "Add a new cocktail", new_cocktail_path %>
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.2) 20%), url('https://images.unsplash.com/photo-1513614825922-8fdb7f6ee617');">
+  <div>
+    <h1>Shaaaaaake it</h1>
+    <p>A delicious collection of cocktails</p>
+  </div>
+  <div class="banner-arrow text-center">
+    <%= link_to '#cocktails' do %>
+      <h3>Discover</h3>
+      <i class="fas fa-chevron-down"></i>
+    <% end %>
+  </div>
+</div>
+<div class="home-wrapper">
+  <div class="container text-center" id="cocktails">
+    <h2 class="cards-title">Cocktails</h2>
+    <div class="cards">
+      <div class="row">
+        <% @cocktails.each do |cocktail| %>
+          <div class="col-xs-6 col-sm-6 col-md-4">
+            <%= link_to cocktail_path(cocktail) do  %>
+              <div class="card">
+                <%= image_tag(cocktail.image_url, class: "card-img") if cocktail.image_url != nil %>
+                <div class="card-name"><%= cocktail.name %></div>
+              </div>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

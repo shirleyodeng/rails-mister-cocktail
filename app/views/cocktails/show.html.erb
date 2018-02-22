@@ -1,5 +1,6 @@
 <div class="container">
   <h1><%= @cocktail.name %></h1>
+  <%= image_tag(@cocktail.image_url + '?w=500') if @cocktail.image_url != nil %>
   <ul>
     <% @cocktail.doses.each do |dose| %>
     <li>
@@ -10,5 +11,6 @@
     <% end %>
   </ul>
   <%= link_to "Add a new dose", new_cocktail_dose_path(@cocktail) %>
+  <%= link_to "Back to cocktails", cocktails_path %>
 </div>
 
