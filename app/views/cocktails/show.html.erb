@@ -2,7 +2,7 @@
   <div class="cocktail-card">
     <h1 class="cocktail-name text-right"><%= @cocktail.name %></h1>
     <div class="cocktail-content">
-      <%= image_tag(@cocktail.image_url, class: "cocktail-image") %>
+      <%= image_tag(@cocktail.image_url, class: "cocktail-image") if @cocktail.image_url != nil %>
       <ul>
         <div class="cocktail-ingredients">
           <% @cocktail.doses.each do |dose| %>
