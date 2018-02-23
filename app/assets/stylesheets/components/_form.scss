@@ -1,26 +1,33 @@
-.form-background {
-  text-align: center;
-  height: calc(100vh - 60px);
-  background-size: cover !important;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.form-title {
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .form-container {
- display: table;
- width: 400px;
+  display: table;
+  width: 400px;
 }
 
-.new-form {
-  display: table-cell;
-  text-align: center;
-  vertical-align: middle;
-  margin: 50px 500px 50px 400px;
-  background-color: white;
-  padding: 20px;
-  h1 {
-    margin-top: 10px;
-    font-size: 30px;
-  }
+#add {
+  font-size: 25px;
+}
+
+.form-label {
+  font-family: "Helvetica Neue";
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form-input {
+  font-size: 14px;
+}
+
+.center-btn {
+  width: 30%;
 }

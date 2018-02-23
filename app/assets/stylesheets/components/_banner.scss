@@ -23,7 +23,7 @@
   opacity: 0.8;
 }
 
-.banner-arrow {
+#banner-arrow {
   position: absolute;
   bottom: 15px;
   font-size: 40px;
@@ -43,7 +43,6 @@
 }
 
 .banner-bar {
-  width: 3em;
-  border-top: 2px solid white;
-  margin-bottom: 15px;
+  width: 70px;
+  border-bottom: 3px solid white;
 }

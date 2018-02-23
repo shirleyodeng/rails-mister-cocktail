@@ -1,6 +1,31 @@
 <div class="navbar-shakeit">
   <%= link_to "Sip Me Baby One More Time", cocktails_path, class: "logo-link" %>
-  <%= link_to new_cocktail_path do %>
-    <i class="fas fa-plus 3x"></i>
-  <% end %>
+  <a href data-toggle="modal" data-target="#myModal" id="add"><i class="fas fa-plus 5x"></i></a>
+</div>
+
+<div class="modal fade" id="myModal" role="dialog">
+  <div class="modal-dialog modal-sm">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <button type="button" class="close" data-dismiss="modal"><i class="fas fa-times"></i></button>
+        <h1 class="form-title">Add a new cocktail</h1>
+      </div>
+      <div class="modal-body text-center">
+        <%= simple_form_for(Cocktail.new) do |f| %>
+          <div class="form-group">
+            <%= f.input :name, class: 'form-control', input_html: { class: 'form-input' }, wrapper_html: { class: 'form-label' } %>
+          </div>
+          <div class="form-group">
+            <%= f.input :photo, class: 'form-control', input_html: { class: 'center-btn' }, wrapper_html: { class: 'form-label' } %>
+            <%= f.input :photo_cache, as: :hidden, class: 'form-control' %>
+          </div>
+          <%= button_tag type: 'submit', class: "btn" do %>
+            <div id="add"><i class="fas fa-plus 5x" aria-hidden="true"></i></div>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
 </div>
