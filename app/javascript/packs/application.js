@@ -1,3 +1,3 @@
-import { slideDown } from '../components'
+import { mouseOver } from '../components'
 
-slideDown()
+mouseOver()

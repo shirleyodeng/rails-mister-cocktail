@@ -11,7 +11,7 @@
   padding-bottom: 140px;
 }
 
-.cards {
+#cards {
   display: flex;
   justify-content: center;
   padding-top: 20px
@@ -33,6 +33,7 @@
 }
 
 .card-name {
+  visibility: hidden;
   font-family: 'Poppins';
   color: white;
   font-weight: normal;
